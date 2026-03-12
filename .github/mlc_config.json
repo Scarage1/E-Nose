@@ -1,0 +1,12 @@
+{
+  "ignorePatterns": [
+    { "pattern": "^https://edgeimpulse.com" },
+    { "pattern": "^https://www.digikey.com" },
+    { "pattern": "^https://colab.research.google.com" },
+    { "pattern": "^https://studio.edgeimpulse.com" }
+  ],
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackRetryDelay": "30s",
+  "aliveStatusCodes": [200, 206]
+}

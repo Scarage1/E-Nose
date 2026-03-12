@@ -44,9 +44,9 @@ The **E-Nose** performs **sensor fusion** — combining raw readings from three 
 │                         E-Nose System                            │
 │                                                                  │
 │  ┌──────────┐  ┌──────────┐  ┌────────────────────┐              │
-│  │  BME680  │  │  SGP30   │  │ Multichannel Gas v2 │             │
-│  │ Temp     │  │ CO2      │  │ VOC · NO2           │             │
-│  │ Humidity │  │ TVOC     │  │ Ethanol · CO        │             │
+│  │  BME680  │  │  SGP30   │  │ Multichannel Gas v2│              │
+│  │ Temp     │  │ CO2      │  │ VOC · NO2          │              │
+│  │ Humidity │  │ TVOC     │  │ Ethanol · CO       │              │
 │  └────┬─────┘  └────┬─────┘  └─────────┬──────────┘              │
 │       └─────────────┴──────────────────┘                         │
 │                     Grove I2C Hub                                │
@@ -115,7 +115,16 @@ BME680 SGP30 Gas v2
 E-Nose/
 ├── README.md                            # ← You are here
 ├── LICENSE
+├── CONTRIBUTING.md                      # How to contribute
 ├── .gitignore
+│
+├── .github/
+│   ├── workflows/
+│   │   └── ci.yml                       # GitHub Actions: Python lint + link check
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   └── pull_request_template.md
 │
 ├── docs/
 │   ├── SETUP.md                         # Hardware & Arduino IDE setup
@@ -137,6 +146,7 @@ E-Nose/
 │
 ├── scripts/
 │   ├── serial_data_collect_csv.py       # Captures serial CSV data to files
+│   ├── plot_dataset.py                  # Visualise raw/scaled CSV data locally
 │   └── requirements.txt                 # Python dependencies
 │
 ├── notebooks/
@@ -160,6 +170,12 @@ pip install -r scripts/requirements.txt
 python scripts/serial_data_collect_csv.py -p <PORT> -b 115200 -d datasets/raw -l coffee
 ```
 Repeat for each odor label. See [docs/DATA_COLLECTION.md](docs/DATA_COLLECTION.md).
+
+### 2b — (Optional) Visualise Locally
+```bash
+python scripts/plot_dataset.py -d datasets/raw
+```
+Produces time-series, per-label overlay, and box-plot charts for all collected features.
 
 ### 3 — Curate Dataset
 Open `notebooks/dataset_curation.ipynb` in [Google Colab](https://colab.research.google.com/), upload your raw CSVs, and run all cells to produce normalized data.
@@ -194,6 +210,7 @@ The model was trained to distinguish between several odor categories:
 | [docs/DATA_COLLECTION.md](docs/DATA_COLLECTION.md) | Odor sample collection workflow |
 | [docs/MODEL_TRAINING.md](docs/MODEL_TRAINING.md) | Edge Impulse training pipeline |
 | [docs/INFERENCE.md](docs/INFERENCE.md) | Deploying the model for live inference |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute to this project |
 
 ---
 
