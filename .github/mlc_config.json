@@ -3,7 +3,9 @@
     { "pattern": "^https://edgeimpulse.com" },
     { "pattern": "^https://www.digikey.com" },
     { "pattern": "^https://colab.research.google.com" },
-    { "pattern": "^https://studio.edgeimpulse.com" }
+    { "pattern": "^https://studio.edgeimpulse.com" },
+    { "pattern": "^\.\./" },
+    { "pattern": "^mailto:" }
   ],
   "retryOn429": true,
   "retryCount": 3,

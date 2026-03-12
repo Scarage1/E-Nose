@@ -8,8 +8,8 @@ Thank you for your interest in contributing! All contributions are welcome — b
 
 | Type | How |
 |------|-----|
-| 🐛 Bug report | Open an [issue](../../issues/new?template=bug_report.md) |
-| 💡 Feature idea | Open an [issue](../../issues/new?template=feature_request.md) |
+| 🐛 Bug report | Open an [issue](https://github.com/Scarage1/E-Nose/issues/new?template=bug_report.md) |
+| 💡 Feature idea | Open an [issue](https://github.com/Scarage1/E-Nose/issues/new?template=feature_request.md) |
 | 📖 Docs improvement | Edit a `.md` file and open a PR |
 | 🔧 Code improvement | Fork → branch → PR |
 | 📊 Dataset sharing | See the datasets section below |
@@ -98,4 +98,4 @@ Datasets are excluded from the repo by default (see `.gitignore`) because they a
 
 ## Questions?
 
-Open an [issue](../../issues) or start a [Discussion](../../discussions).
+Open an [issue](https://github.com/Scarage1/E-Nose/issues) or start a [Discussion](https://github.com/Scarage1/E-Nose/discussions).

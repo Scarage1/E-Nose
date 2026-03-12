@@ -31,10 +31,9 @@ try:
     import pandas as pd
     import matplotlib.pyplot as plt
     import matplotlib.cm as cm
-    import numpy as np
 except ImportError as e:
     print(f"ERROR: Missing dependency — {e}")
-    print("Run:  pip install pandas matplotlib numpy")
+    print("Run:  pip install pandas matplotlib")
     sys.exit(1)
 
 
