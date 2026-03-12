@@ -1,0 +1,54 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+.env
+.venv
+env/
+venv/
+
+# ─── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ─── Arduino / C++ ────────────────────────────────────────────────────────────
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+build/
+*.bak
+
+# ─── Edge Impulse generated library (user-specific) ──────────────────────────
+firmware/inference/live/ei-model/
+firmware/inference/static/ei-model/
+*.zip
+
+# ─── Dataset CSVs (large; manage separately or via Git LFS) ──────────────────
+datasets/raw/
+datasets/scaled/
+!datasets/README.md
+
+# ─── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ─── VS Code ──────────────────────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.swp
+*~

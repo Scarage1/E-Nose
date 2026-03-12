@@ -1,0 +1,4 @@
+# E-Nose Python Dependencies
+# Install with:  pip install -r requirements.txt
+
+pyserial>=3.5
